@@ -15,7 +15,7 @@ client.on("message", message => {
       .setColor("#000000") 
       .setDescription(`
       
-                    System Bot Minore Commands
+                    System Bot COG Commands
 Please Choose:
              
 ${prefix}ban ⇏  خاصية الباند
@@ -52,7 +52,7 @@ ${prefix}warn ⇏ لتحضير شخص ما
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
-.addField('مصمم  + صاحب البوت ',`ŜuLTan ♕#0060 `)
+.addField('مصمم  + صاحب البوت ',`ŜuLTan ♕#0068 `)
 .setColor('#7d2dbe')
   message.channel.sendEmbed(embed);
     }
@@ -143,23 +143,6 @@ client.on('message' , async (message) => {
 }
 
 });
-
-
-
-    
-    client.on('guildMemberRemove', member => {
-        var embed = new Discord.RichEmbed()
-        .setAuthor(member.user.username, member.user.avatarURL)
-        .setThumbnail(member.user.avatarURL)
-        .setTitle(`بس بعرف وين رحت؟؟؟ :raised_hand::skin-tone-1: :pensive:`)
-        .setDescription(`مع السلامه تشرفنا بك :raised_hand::skin-tone-1: :pensive: `)
-        .addField(':bust_in_silhouette:   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
-        .setColor('RED')
-    
-    var channel =member.guild.channels.find('name', 'chat')
-    if (!channel) return;
-    channel.send({embed : embed});
-    })
 
 client.on('message', ra3d => {
 var prefix = "-";
@@ -344,7 +327,7 @@ client.on('message', message => {
 
     let args = message.content.split(' ').slice(1).join(' ');
      if(!message.channel.guild) return;
-if(message.content.split(' ')[0] == '-bc') {
+if(message.content.split(' ')[0] == '#bc') {
          message.react("✔️")
           let embed = new Discord.RichEmbed()
     .setColor("#FF00FF")
