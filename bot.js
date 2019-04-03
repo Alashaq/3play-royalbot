@@ -237,7 +237,7 @@ if(!true) return;
 
 
 client.on('message', function(message) {
-	const myID = "346045919072092161";
+	const myID = "330010844199124992";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
