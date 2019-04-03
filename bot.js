@@ -15,7 +15,7 @@ client.on("message", message => {
       .setColor("#000000") 
       .setDescription(`
       
-                    System Bot COG Commands
+                    System Bot FiveStore Commands
 Please Choose:
              
 ${prefix}ban ⇏  خاصية الباند
@@ -290,23 +290,6 @@ client.on('message', function(message) {
     }
 });
 
-client.on('message', msg => {
-  const DiscordLink = [".net", ".tk", ".com"];
-  if( DiscordLink.some(word => msg.content.includes(word)) ) {
-    msg.reply(`**حبي ممنوع نشر اي روابط:joy: **`)
-    msg.delete();
-
-}
-})
-
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('.com', '.net', '.tk')){
-        message.delete()
-    return message.reply(`**حبي ممنوع نشر اي روابط:joy: **`)
-    }
-});
-
 client.on('message', (message)=>{
         if (message.content.startsWith(`+embed`)) {
                 var embed = new Discord.RichEmbed()
@@ -320,32 +303,6 @@ client.on('message', (message)=>{
                 message.channel.send(message.content.split(" ").join(" ").slice(5));
         };
 })
-
-
-client.on('message', message => {
-   let embed = new Discord.RichEmbed()
-
-    let args = message.content.split(' ').slice(1).join(' ');
-     if(!message.channel.guild) return;
-if(message.content.split(' ')[0] == '#bc') {
-         message.react("✔️")
-          let embed = new Discord.RichEmbed()
-    .setColor("#FF00FF")
-    .setThumbnail(message.author.avatarURL)   
-                                      .addField('تم الارسال بواسطة :', "<@" + message.author.id + ">")
-                 message.channel.sendEmbed(embed);
-        message.guild.members.forEach(m => {
-            var bc = new Discord.RichEmbed()
-.addField('**● Sender  :**', `*** → ${message.author.username}#${message.author.discriminator}***`)
-            .addField('***● Server  :***', `*** → ${message.guild.name}***`)               
-    .setColor('#ff0000')
-                 .addField('ّ', args)
-            m.send(``,{embed: bc});
-        });
-    }
-})
-	
-
 
         client.on('message', message => {
                         let args = message.content.split(" ").slice(1).join(" ")
